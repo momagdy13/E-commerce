@@ -1,0 +1,72 @@
+.singuplogin {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(180deg, #9c2b01, #9b7f028f 60%);
+  padding-top: 100px;
+}
+.container {
+  width: 580px;
+  height: 540px;
+  background: white;
+  margin: auto;
+  padding: 40px 60px;
+}
+.container h1 {
+  margin: 20px 0px;
+}
+.login-filds {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+.login-filds input {
+  height: 60px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  color: #5c5c5c;
+  font-size: 22px;
+  outline: none;
+  border-radius: 30px;
+}
+.container button {
+  height: 58px;
+  width: 160px;
+  outline: none;
+  border-radius: 75px;
+  border: 1px solid #7a7a7a;
+  font-size: 20px;
+  background: white;
+  color: #515151;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+.container button:active {
+  background: linear-gradient(15deg, #810000, #fc037fec 60%);
+}
+.loginsignup {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+.loginsignup span {
+  color: red;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+  color: #5c5c5c;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 500px) {
+    
+}

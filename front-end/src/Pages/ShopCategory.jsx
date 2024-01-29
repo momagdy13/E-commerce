@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Css/Category.css";
 import { ShopContext } from "../Context/ShopContext";
-import dropdown_icon from '../Components/Assets/dropdown_icon.png'
+import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import Items from "../Components/Items/Items";
 
 export default function ShopCategory(props) {
@@ -18,26 +18,24 @@ export default function ShopCategory(props) {
         </div>
       </div>
       <div className="shop-category-products">
-        {all_product.map((item, i )=>{
-          if(props.category === item.category){
-          return (
-            <Items
-              key={i}
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              old_price={item.old_price}
-              new_price={item.new_price}
-            />
-          
-          );
+        {all_product.map((item, i) => {
+          if (props.category === item.category) {
+            return (
+              <Items
+                key={i}
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                old_price={item.old_price}
+                new_price={item.new_price}
+              />
+            );
+          } else {
+            return null;
           }
-          else{return null}
         })}
       </div>
-      <div className="loadmore">
-        Explore More
-      </div>
+      <div className="loadmore">Explore More</div>
     </div>
   );
 }

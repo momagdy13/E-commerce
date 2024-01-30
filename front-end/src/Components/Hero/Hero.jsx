@@ -2,7 +2,6 @@ import React from "react";
 import "./Hero.css";
 import hand_Icon from "../Assets/hand_icon.png";
 import arrow from "../Assets/arrow.png";
-import hero_img from "../Assets/hero_image.png";
 export default function Hero() {
   return (
     <div className="hero">
@@ -22,7 +21,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-right">
-        <img src={hero_img} alt="" />
+        <img src='' alt="" />
       </div>
     </div>
   );

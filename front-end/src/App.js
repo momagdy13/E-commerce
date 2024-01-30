@@ -8,7 +8,6 @@ import SignUpLogin from './Pages/SignUpLogin'
 import Shop from './Pages/Shop'
 import Fotter from "./Components/Fotter/Fotter";
 import men_banner from './Components/Assets/banner_mens.png'
-import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop/>} />
           <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
+          <Route path="/womens" element={<ShopCategory  category="women" />} />
           <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
           <Route path="/products" element={<Products />}>
             <Route path=":productId" element={<Products />} />

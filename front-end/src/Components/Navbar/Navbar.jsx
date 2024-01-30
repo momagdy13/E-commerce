@@ -4,7 +4,7 @@ import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
-import nav_dropDown from "../Assets/dropdon_icon.png";
+import nav_dropDown from "../Assets/dropdown_icon.png";
 export default function Navbar() {
   const [menu, setMenu] = useState("Shop");
   const { getTotalCartItems } = useContext(ShopContext);

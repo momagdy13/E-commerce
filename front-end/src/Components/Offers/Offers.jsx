@@ -1,5 +1,4 @@
 import React from 'react'
-import Exclusive_img from '../Assets/exclusive_image.png'
 import './Offers.css'
 
 export default function Offers() {
@@ -12,7 +11,7 @@ export default function Offers() {
             <button>Check Now</button>
         </div>
         <div className="offers-right">
-            <img src={Exclusive_img} alt="" />
+            <img src=''alt="" />
         </div>
     </div>
   )

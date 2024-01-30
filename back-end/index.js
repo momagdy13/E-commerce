@@ -44,7 +44,7 @@ const upload = multer({ storage: storage });
 app.use("/images", express.static("upload/images"));
 app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
-    sucsses1: 1,
+    sucsses: 1,
     img_url: `http://localhost:4000/images/${req.file.filename}`,
   });
 });
@@ -186,24 +186,24 @@ app.post("/addtocart", fetchUser, async (req, res) => {
 });
 // Creating EndPoint For Add to cart//
 
-app.post('/removefromcart', fetchUser, async(req, res)=>{
-  console.log('removed')
-   let userData = await Users.find({ _id: req.user });
-   console.log(userData);
-   userData.cartData[req.body.itemId] -= 1;
+app.post("/removefromcart", fetchUser, async (req, res) => {
+  console.log("removed");
+  let userData = await Users.find({ _id: req.user });
+  console.log(userData);
+  userData.cartData[req.body.itemId] -= 1;
 
-   await Users.findOneAndUpdate(
-     { _id: req.user },
-     { cartData: userData.cartData }
-   );
-   res.send("Removed");
-})
+  await Users.findOneAndUpdate(
+    { _id: req.user },
+    { cartData: userData.cartData }
+  );
+  res.send("Removed");
+});
 
-app.post('/getart', fetchUser, async(req, res)=>{
-  console.log('GetCart')
-  let userData = await Users.find({_id:req.user})
-  res.json(userData.cartData)
-})
+app.post("/getart", fetchUser, async (req, res) => {
+  console.log("GetCart");
+  let userData = await Users.find({ _id: req.user });
+  res.json(userData.cartData);
+});
 
 app.listen(port, () => {
   console.log("I'm Listen to 4000");
